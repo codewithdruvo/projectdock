@@ -12,7 +12,7 @@ const ContactCard = ({ title, icon: Icon, link, text }: Props) => {
   return (
     <section
       className="contact-card flex items-center gap-4 w-full bg-white dark:bg-muted
-    shadow border rounded px-4 py-3"
+    border rounded-xl px-4 py-3"
     >
       <span className="contact-card_icon text-4xl text-primary">
         <Icon />

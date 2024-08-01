@@ -1,6 +1,7 @@
 import ContactCard from "@/components/cards/ContactCard";
 import contactIcons, { ContactIcon } from "@/config/icons/contact-icons";
 import { Link } from "@/types/common.type";
+import { Contrast } from "lucide-react";
 
 type Props = {
   contacts: Link<ContactIcon>[];

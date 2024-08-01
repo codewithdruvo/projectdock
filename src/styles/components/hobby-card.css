@@ -1,9 +1,9 @@
 .hobby-card {
-  @apply w-full bg-white dark:bg-muted flex flex-col items-center justify-center min-h-[180px] gap-2 p-5 rounded shadow border;
+  @apply w-full bg-white dark:bg-muted flex flex-col sm:flex-row items-center justify-center sm:justify-start min-h-[80px] gap-2 p-5 rounded-xl border;
 }
 
 .hobby-card_icon {
-  @apply text-7xl text-primary;
+  @apply text-6xl p-2 text-primary
 }
 
 .hobby-card_title {

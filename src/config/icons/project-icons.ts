@@ -1,14 +1,18 @@
 import type { IconType } from "react-icons";
-import { LuBookOpen, LuExternalLink, LuGitBranch } from "react-icons/lu";
+import { AiOutlineBorderlessTable } from "react-icons/ai";
+import { FaReadme } from "react-icons/fa";
+import { CgMediaLive } from "react-icons/cg";
+import { TbSourceCode } from "react-icons/tb";
 
 export type ProjectIconType = IconType;
 
-export type ProjectIcon = "VIEW_MORE" | "SOURCE" | "PREVIEW";
+export type ProjectIcon = "VIEW_MORE" | "SOURCE" | "PREVIEW" | "TECH";
 
 const projectIcons: Record<ProjectIcon, ProjectIconType> = {
-  VIEW_MORE: LuBookOpen,
-  PREVIEW: LuExternalLink,
-  SOURCE: LuGitBranch,
+  VIEW_MORE: FaReadme,
+  PREVIEW: CgMediaLive,
+  SOURCE: TbSourceCode,
+  TECH: AiOutlineBorderlessTable
 };
 
 export default projectIcons;

@@ -9,7 +9,7 @@ const SkillCard = ({ title, level }: Props) => {
   return (
     <div className="skill-card">
       <h3 className="skill-card_title">{title}</h3>
-      <Badge className="rounded-sm">{level}</Badge>
+      <Badge className="rounded-full px-3">{level}</Badge>
     </div>
   );
 };

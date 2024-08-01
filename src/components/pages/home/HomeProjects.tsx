@@ -9,11 +9,11 @@ type Props = {
 
 const HomeProjects = ({ title, description, projects = [] }: Props) => {
   return (
-    <section className="py-16">
+    <section className="py-16 sm:py-20">
       <h2 className="block_heading mb-1">{title}</h2>
       <p className="block_desc mb-10">{description}</p>
 
-      <div className="grid sm:grid-cols-2 gap-3">
+      <div className="grid sm:grid-cols-2 gap-3 sm:gap-5">
         {projects?.map((project) => (
           <div key={project.slug}>
             <ProjectCard

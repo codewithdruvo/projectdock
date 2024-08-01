@@ -29,7 +29,9 @@ const ProjectCard = ({
         </div>
       ) : null}
 
+      <div className="relative">
       <div className="project-card_body">
+        <div>
         <h2 className="project-card_title">
           {path ? (
             <Link href={`/portfolio/${path}`} className="hover:text-primary">
@@ -41,30 +43,42 @@ const ProjectCard = ({
         </h2>
 
         <p className="project-card_desc">{desc}</p>
+
+        {techs ? (
+          <div className="hidden sm:flex project-card_techs">
+            {techs.map((tech) => (
+              <span key={tech}> <projectIcons.TECH /> {tech}</span>
+            ))}
+          </div>
+        ) : null}
+          </div>
+
         <div className="project-card_links">
           {path ? (
-            <Link href={`/portfolio/${path}`} title="Learn More">
+            <Link href={`/portfolio/${path}`}  className="p-1" title="Learn More">
               <projectIcons.VIEW_MORE />
             </Link>
           ) : null}
           {previewLink ? (
-            <Link href={previewLink} className="ml-auto" title="Preview">
-              <projectIcons.PREVIEW />
+            <Link href={previewLink} className="ml-auto text-sm  px-2 py-1" title="Preview">
+              <projectIcons.PREVIEW className="animate-pulse sm:flex-col"/> <span>Live</span>
             </Link>
           ) : null}
           {sourceLink ? (
-            <Link href={sourceLink} title="Source Code">
+            <Link href={sourceLink} className="p-1" title="Source Code">
               <projectIcons.SOURCE />
             </Link>
           ) : null}
-        </div>
-        {techs ? (
-          <div className="project-card_techs">
+          </div>
+          {techs ? (
+          <div className="project-card_techs sm:hidden">
             {techs.map((tech) => (
-              <span key={tech}>{tech}</span>
+              <span key={tech}> <projectIcons.TECH /> {tech}</span>
             ))}
           </div>
         ) : null}
+      </div>
+        <div className="project-blur-bg"></div>
       </div>
     </article>
   );

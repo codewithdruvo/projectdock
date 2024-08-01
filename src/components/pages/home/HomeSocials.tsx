@@ -9,15 +9,15 @@ type Props = {
 
 const HomeSocials = ({ links }: Props) => {
   return (
-    <section className="flex items-center gap-5 py-5">
+    <section className="flex items-center py-5">
       <Separator className="flex-1" />
       {links ? (
-        <ul className="icon-list">
+        <ul className="icon-list h-fit border rounded-full px-3 py-0">
           {links.map((link) => {
             const Icon = socialIcons[link.icon];
             if (!Icon) return null;
             return (
-              <li key={link.id}>
+              <li key={link.id} className="flex items-center">
                 <Link
                   href={link.path}
                   className="icon-list_icon"
@@ -31,7 +31,7 @@ const HomeSocials = ({ links }: Props) => {
           })}
         </ul>
       ) : null}
-      <Separator className="flex-1 sm:hidden" />
+      <Separator className="flex-1" />
     </section>
   );
 };

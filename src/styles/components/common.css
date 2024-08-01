@@ -1,8 +1,9 @@
 /* BLOCK Styles */
 .block_heading {
-  @apply text-2xl md:text-3xl font-bold;
+  @apply text-2xl md:text-3xl font-bold text-center;
 }
 
 .block_desc {
-  @apply text-sm leading-normal md:text-base md:leading-relaxed opacity-90;
+  @apply text-sm leading-normal md:text-base md:leading-relaxed opacity-90 text-center;
 }
+

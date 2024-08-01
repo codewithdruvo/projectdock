@@ -10,11 +10,11 @@ type Props = {
 
 const HomeHobbies = ({ title, description, hobbies }: Props) => {
   return (
-    <section className="py-16">
+    <section className="py-16 sm:py-20">
       <h2 className="block_heading mb-10">{title}</h2>
       <p className="block_desc mb-10">{description}</p>
 
-      <div className="grid sm:grid-cols-3 gap-3">
+      <div className="grid sm:grid-cols-3 gap-3 sm:gap-5">
         {hobbies?.map((hobby) => (
           <HobbyCard
             key={hobby.id}

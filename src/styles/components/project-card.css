@@ -1,13 +1,13 @@
 .project-card {
-  @apply rounded overflow-hidden shadow border;
+  @apply rounded-xl overflow-hidden border p-4;
 }
 
 .project-card_media {
-  @apply relative aspect-video;
+  @apply relative aspect-video rounded-xl overflow-hidden;
 }
 
 .project-card_body {
-  @apply p-4 bg-white dark:bg-muted;
+  @apply mt-4 bg-white/10 dark:bg-muted/10 backdrop-blur-xl relative z-10 sm:flex justify-between gap-1;
 }
 
 .project-card_title {
@@ -19,11 +19,11 @@
 }
 
 .project-card_links {
-  @apply flex items-center gap-2 mb-3 text-2xl;
+  @apply flex items-center sm:flex-col gap-2 mb-3 text-2xl;
 }
 
 .project-card_links > a {
-  @apply hover:text-primary;
+  @apply hover:text-primary flex items-center gap-1 bg-muted border rounded-full;
 }
 
 .project-card_techs {
@@ -31,5 +31,11 @@
 }
 
 .project-card_techs > * {
-  @apply whitespace-nowrap;
+  @apply whitespace-nowrap flex items-center;
+}
+
+.project-blur-bg {
+  background: linear-gradient(to bottom, #00f71080 40%, #a912f480 50%);
+  filter: blur(100px);
+  @apply w-1/2 h-full rounded-tl-full absolute bottom-0 right-0;
 }

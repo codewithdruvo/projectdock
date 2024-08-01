@@ -46,8 +46,8 @@ const HomeHero = (props: Props) => {
       </div>
 
       <div className="home-hero_media">
-        <Avatar className="w-36 h-36 rounded">
-          <AvatarImage src={avatar} alt={name} />
+        <Avatar className="w-36 sm:w-52 h-52 sm:h-52 rounded">
+          <AvatarImage src={avatar} alt={name} className="home-hero_pic" />
           <AvatarFallback className="rounded"></AvatarFallback>
         </Avatar>
       </div>

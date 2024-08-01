@@ -1,7 +1,18 @@
 .skill-card {
-  @apply bg-white dark:bg-muted flex items-center justify-between p-3 rounded-sm shadow-sm relative border;
+  @apply bg-white dark:bg-muted backdrop-blur flex items-center justify-between p-3 rounded-sm shadow-sm relative border dark:border-muted;
 }
 
 .skill-card_title {
   @apply font-medium text-lg;
 }
+
+.skill-card_blur-bg {
+  background: linear-gradient(to bottom, #9000f757 40%, #12b4f469 50%);
+  background-position: center;
+  filter: blur(150px);
+  @apply w-1/2 h-full rounded-tl-full absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

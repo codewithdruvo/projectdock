@@ -23,3 +23,22 @@
 .home-hero_cta {
   @apply mt-10 flex gap-2 flex-wrap justify-center sm:justify-start;
 }
+
+.home-hero_pic {
+    clip-path: polygon(
+      100% 0%,
+      72% 0%,
+      41% 0%,
+      20% 0%,
+      0% 0%,
+      0% 49%,
+      0% 85%,
+      15% 100%,
+      39% 100%,
+      61% 100%,
+      79% 100%,
+      100% 100%,
+      100% 83%,
+      100% 28%
+    );
+}
