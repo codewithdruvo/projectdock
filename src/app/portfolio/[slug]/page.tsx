@@ -9,9 +9,7 @@ import { getProject, getProjectsSlug } from "@/utils/app-request";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export async function generateMetadata({
-  params,
-}: MetadataProps): Promise<Metadata> {
+export async function generateMetadata({ params }: MetadataProps): Promise<Metadata> {
   const project = await getProject(params.slug);
 
   if (!project) return {};
@@ -72,9 +70,8 @@ const ProjectDetails = async ({ params }: { params: { slug: string } }) => {
       />
       <article
         className="prose dark:prose-invert w-full overflow-x-hidden"
-        dangerouslySetInnerHTML={{ __html: project.content.html }}
+        dangerouslySetInnerHTML={{ __html: project?.content?.html || "" }}
       ></article>
-
       <ProjectStacks stacks={project.stacks} className="mt-16" />
     </>
   );
