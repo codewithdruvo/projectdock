@@ -22,7 +22,7 @@ const ProjectCard = ({
   techs,
 }: Props) => {
   return (
-    <article className="project-card">
+    <article className="project-card w-full">
       {thumbnail ? (
         <div className="project-card_media">
           <Image src={thumbnail} alt={title} fill />
@@ -42,10 +42,10 @@ const ProjectCard = ({
           )}
         </h2>
 
-        <p className="project-card_desc">{desc}</p>
+        <p className="project-card_desc w-auto">{desc}</p>
 
         {techs ? (
-          <div className="project-card_techs">
+          <div className="project-card_techs hidden sm:flex flex-wrap">
             {techs.map((tech) => (
               <span key={tech}> <projectIcons.TECH /> {tech}</span>
             ))}
@@ -60,7 +60,7 @@ const ProjectCard = ({
             </Link>
           ) : null}
           {previewLink ? (
-            <Link href={previewLink} className="ml-auto text-sm  px-2 py-1" title="Preview">
+            <Link href={previewLink} className="ml-auto sm:ml-0 text-sm  px-2 py-1" title="Preview">
               <projectIcons.PREVIEW className="animate-pulse sm:flex-col"/> <span>Live</span>
             </Link>
           ) : null}
@@ -70,13 +70,13 @@ const ProjectCard = ({
             </Link>
           ) : null}
           </div>
-          {/* {techs ? (
-          <div className="project-card_techs">
+          {techs ? (
+          <div className="project-card_techs sm:hidden flex-wrap">
             {techs.map((tech) => (
               <span key={tech}> <projectIcons.TECH /> {tech}</span>
             ))}
           </div>
-        ) : null} */}
+        ) : null}
       </div>
         <div className="project-blur-bg"></div>
       </div>
