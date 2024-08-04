@@ -45,7 +45,7 @@ const ProjectCard = ({
         <p className="project-card_desc">{desc}</p>
 
         {techs ? (
-          <div className="hidden sm:flex project-card_techs">
+          <div className="project-card_techs hidden sm:flex ">
             {techs.map((tech) => (
               <span key={tech}> <projectIcons.TECH /> {tech}</span>
             ))}
