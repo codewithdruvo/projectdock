@@ -45,7 +45,7 @@ const ProjectCard = ({
         <p className="project-card_desc">{desc}</p>
 
         {techs ? (
-          <div className="project-card_techs hidden sm:flex ">
+          <div className="project-card_techs !hidden !sm:flex ">
             {techs.map((tech) => (
               <span key={tech}> <projectIcons.TECH /> {tech}</span>
             ))}
@@ -71,7 +71,7 @@ const ProjectCard = ({
           ) : null}
           </div>
           {techs ? (
-          <div className="project-card_techs sm:hidden">
+          <div className="project-card_techs !sm:hidden">
             {techs.map((tech) => (
               <span key={tech}> <projectIcons.TECH /> {tech}</span>
             ))}
