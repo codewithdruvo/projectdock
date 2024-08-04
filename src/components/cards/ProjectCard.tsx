@@ -70,13 +70,13 @@ const ProjectCard = ({
             </Link>
           ) : null}
           </div>
-          {techs ? (
+          {/* {techs ? (
           <div className="project-card_techs sm:hidden flex-wrap">
             {techs.map((tech) => (
               <span key={tech}> <projectIcons.TECH /> {tech}</span>
             ))}
           </div>
-        ) : null}
+        ) : null} */}
       </div>
         <div className="project-blur-bg"></div>
       </div>
